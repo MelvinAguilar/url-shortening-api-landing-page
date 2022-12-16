@@ -1,0 +1,23 @@
+@import "./../../mixins";
+
+.button {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.8rem 1.8rem;
+  border-radius: 7rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  background-color: $theme-cyan;
+  color: $theme-white;
+  transition: all 0.2s ease-in-out;
+
+  @include media-hover-effect {
+    &:hover {
+      background-color: lighten($theme-cyan, 25%);
+    }
+  }
+}

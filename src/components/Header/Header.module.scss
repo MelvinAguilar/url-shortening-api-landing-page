@@ -1,0 +1,44 @@
+@import "./../../mixins";
+
+.header {
+  padding: 1rem;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .skipLink {
+    position: absolute;
+    left: -624.9375rem;
+    z-index: 999;
+    padding: 1em;
+    background-color: $theme-dark-violet;
+    color: white;
+    opacity: 0;
+  }
+
+  .skipLink:focus {
+    left: 0;
+    opacity: 1;
+  }
+
+  .logoImg {
+    display: block;
+    max-width: max-content;
+  }
+
+  @include media-breakpoint-up($screen-lg) {
+    margin-top: 3rem;
+    padding: 0;
+
+    &__container {
+      max-width: 73.25rem;
+      margin: 0 auto;
+      padding-inline: 2rem;
+      gap: 2.7794rem;
+    }
+  }
+}

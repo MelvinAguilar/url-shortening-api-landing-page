@@ -1,0 +1,107 @@
+@import "./../../../mixins";
+
+.singleLink {
+  background-color: $theme-white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+
+  max-width: 1110px;
+  width: 100%;
+  margin-inline: auto;
+
+  &__shortened,
+  &__original {
+    margin-block: 0.7rem;
+    word-break: break-word;
+    text-decoration: none;
+    display: block;
+  }
+
+  &__link {
+    border-bottom: 1px solid $theme-grayish-violet;
+  }
+
+  &__original {
+    color: $theme-very-dark-violet;
+    margin-block: 0;
+    font-weight: 500;
+
+    @include media-hover-effect {
+      &:hover {
+        color: lighten($theme-very-dark-violet, 25%);
+      }
+    }
+  }
+
+  &__shortened {
+    color: $theme-cyan;
+    font-weight: 700;
+
+    @include media-hover-effect {
+      &:hover {
+        color: lighten($theme-cyan, 25%);
+      }
+    }
+  }
+
+  &__button {
+    border-radius: 0.5rem;
+
+    &:not(.singleLink__buttonCopied):focus {
+      animation: jump 3s infinite;
+    }
+  }
+
+  &__buttonCopied {
+    background-color: $theme-dark-violet;
+  }
+
+  @include media-breakpoint-up($screen-lg) {
+    padding: 0.9rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    &__link {
+      border-bottom: none;
+    }
+
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    &__button {
+      width: fit-content;
+      height: fit-content;
+      max-width: 120px;
+      width: 100%;
+    }
+    p {
+      margin-block: 0;
+    }
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  5% {
+    transform: translateY(-4px);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-4px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+}

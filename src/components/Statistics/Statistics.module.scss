@@ -1,0 +1,142 @@
+@import "./../../mixins";
+
+.statistics {
+  background-color: $theme-ligth-gray;
+  padding: 4.5rem 1.5rem 4.79rem;
+  text-align: center;
+  position: relative;
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $theme-dark-blue;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03ch;
+  }
+
+  &__text {
+    max-width: 32.75rem;
+    margin-inline: auto;
+    color: $theme-grayish-violet;
+    margin-bottom: 6rem;
+  }
+
+  &__cards::before {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 53.125rem;
+    background-color: $theme-cyan;
+    margin-bottom: 1.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__card {
+    background-color: $theme-white;
+    padding: 4rem 1.5rem 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    max-width: 21.875rem;
+  }
+
+  &__cardIconWrapper {
+    @include center-grid;
+    background-color: $theme-dark-violet;
+    padding: 1.5rem;
+    border-radius: 50%;
+    width: 5.3125rem;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__cardTitle {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: $theme-dark-blue;
+    margin-bottom: 1rem;
+  }
+
+  &__cardText {
+    color: $theme-grayish-violet;
+  }
+
+  @include media-breakpoint-up($screen-md) {
+    padding-inline: 3rem;
+
+    &__cards::before {
+      display: none;
+    }
+
+    &__card:nth-child(1) {
+      align-self: flex-start;
+    }
+
+    &__card:nth-child(3) {
+      align-self: flex-end;
+    }
+  }
+
+  @include media-breakpoint-up($screen-lg) {
+    font-size: 1.125rem;
+    padding-bottom: 7.5rem;
+
+    &__title {
+      font-size: 2.5rem;
+      margin-bottom: 0.5625rem;
+    }
+
+    &__text {
+      line-height: 2rem;
+    }
+
+    &__cards {
+      max-width: 69.375rem;
+      margin-inline: auto;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      position: relative;
+    }
+
+    &__cards::before {
+      display: block;
+      width: 67.8125rem;
+      height: 0.5rem;
+      bottom: 10.8rem;
+    }
+
+    &__card:nth-child(2) {
+      margin-top: 2.75rem;
+    }
+
+    &__card:nth-child(3) {
+      margin-top: 5.5rem;
+    }
+
+    &__card {
+      text-align: left;
+      padding-inline: 2rem;
+      font-size: 0.9375rem;
+      line-height: 1.625rem;
+      padding: 5rem 2rem 2.5625rem;
+    }
+
+    &__cardIconWrapper {
+      left: 2rem;
+      transform: none;
+      padding: 0.5rem;
+    }
+  }
+}

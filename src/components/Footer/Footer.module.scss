@@ -1,0 +1,114 @@
+@import "./../../mixins";
+
+.footer {
+  padding: 3rem 1.5rem;
+  background-color: $theme-dark-blue;
+
+  &__container {
+    max-width: 69.375rem;
+    margin-inline: auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 1.5rem;
+    color: $theme-white;
+  }
+
+  &__logoImg {
+    display: block;
+    filter: brightness(0) invert(100%);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__listTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.36rem;
+  }
+
+  &__listDesc a {
+    display: block;
+    margin-block: 0.6rem;
+    color: $theme-grayish-violet;
+  }
+
+  &__listLink {
+    font-size: 0.9375rem;
+    color: $theme-white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    @include media-hover-effect {
+      &:hover {
+        color: $theme-cyan;
+      }
+    }
+  }
+
+  &__attribution {
+    font-size: 0.9375rem;
+    color: $theme-grayish-violet;
+    text-align: center;
+    margin-top: 0.7rem;
+
+    a {
+      color: $theme-white;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
+      @include media-hover-effect {
+        &:hover {
+          color: $theme-cyan;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up($screen-md) {
+    padding: 4.4rem 1.5rem 2.16rem;
+
+    &__content {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    &__list {
+      flex-direction: row;
+      gap: 3rem;
+      text-align: left;
+    }
+
+    &__listTitle {
+      font-size: 1rem;
+    }
+
+    &__attribution {
+      flex: 1;
+    }
+  }
+
+  @include media-breakpoint-up($screen-xl) {
+    &__list {
+      gap: 4.5rem;
+
+      div:first-child {
+        margin-left: 10.0625rem;
+      }
+
+      div:last-child {
+        margin-left: 2.25rem;
+      }
+    }
+  }
+}

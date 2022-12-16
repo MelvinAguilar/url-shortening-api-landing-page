@@ -1,0 +1,45 @@
+@import "../../mixins";
+
+.form {
+  background-color: $theme-dark-violet;
+  margin-top: -6rem;
+  padding: 1.5rem;
+  border-radius: 0.7rem;
+
+  //Background image
+  background-image: url("../../images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: right 0 top 0;
+  background-size: contain;
+
+  .button {
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  @include media-breakpoint-up($screen-lg) {
+    margin-top: -6.7rem;
+    width: 100%;
+    max-width: 69.375rem;
+    margin-inline: auto;
+    padding: 3.25rem 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+
+    background-image: url("../../images/bg-shorten-desktop.svg");
+    background-position: 0 0;
+    background-size: cover;
+
+    .button {
+      margin-top: 0;
+      max-width: fit-content;
+      font-size: 1.25rem;
+      padding: 1.125rem 2.5625rem;
+    }
+
+    .input {
+      flex: 1;
+    }
+  }
+}

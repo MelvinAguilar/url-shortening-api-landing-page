@@ -1,0 +1,25 @@
+@import "./../../../mixins";
+
+.footerLinks {
+  &__list {
+    @include flex(row);
+    flex-wrap: wrap;
+
+    padding-inline-start: 0;
+    gap: 1.5rem;
+  }
+
+  &__listItem {
+    display: block;
+  }
+
+  &__listLink {
+    @include media-hover-effect {
+      &:hover img {
+        transition: all 0.2s ease-in-out;
+        filter: invert(63%) sepia(76%) saturate(408%) hue-rotate(131deg)
+          brightness(140%) contrast(94%);
+      }
+    }
+  }
+}

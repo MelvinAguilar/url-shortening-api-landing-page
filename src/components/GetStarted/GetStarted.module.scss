@@ -1,0 +1,44 @@
+@import "./../../mixins";
+
+.getStarted {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 5rem 1.5rem;
+
+  background-image: url("../../images/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: $theme-dark-violet;
+  background-position: right 0 top 0;
+  background-size: auto;
+
+  &__title {
+    color: $theme-white;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__button {
+    max-width: fit-content;
+  }
+
+  @include media-breakpoint-up($screen-lg) {
+    background-image: url("../../images/bg-boost-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    padding: 3.4rem 1.5rem 3.6rem;
+    letter-spacing: -0.1ch;
+
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__button {
+      font-size: 1.25rem;
+      padding: 0.875rem 2.5625rem;
+    }
+  }
+}

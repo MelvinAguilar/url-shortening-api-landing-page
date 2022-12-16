@@ -1,0 +1,22 @@
+// Primary
+$theme-cyan: hsl(180, 66%, 49%);
+$theme-dark-violet: hsl(257, 27%, 26%);
+
+// Secondary
+$theme-red: hsl(0, 87%, 67%);
+
+// Neutral
+$theme-white: hsl(0, 0%, 100%);
+$theme-gray: hsl(0, 0%, 75%);
+$theme-grayish-violet: hsl(257, 7%, 63%);
+$theme-dark-blue: hsl(255, 11%, 22%);
+$theme-very-dark-violet: hsl(260, 8%, 14%);
+$theme-ligth-gray: #F0F1F6;
+
+// Breakpoints
+$screen-sm: 36em;       //576px Large smartphones
+$screen-md: 48em;       //768px Small tablets
+$screen-lg: 62em;       //992px Tablets
+$screen-xl: 75em;       //1200px Desktops
+$screen-xxl: 87.5em;    //1400px Large desktops
+$screen-rwd: 103.75em;  //1660px Custom device

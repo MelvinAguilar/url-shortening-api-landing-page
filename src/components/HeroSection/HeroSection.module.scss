@@ -1,0 +1,98 @@
+@import "./../../mixins";
+
+.hero {
+  padding: 2rem 2rem 9rem;
+  overflow-x: hidden;
+  text-align: center;
+
+  .hero__img {
+    width: max-content;
+
+    img {
+      display: block;
+      width: 125vw;
+    }
+  }
+
+  .hero__text {
+    color: $theme-dark-blue;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-block: 3rem 1rem;
+    }
+
+    p {
+      // font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: $theme-grayish-violet;
+    }
+  }
+
+  @include media-breakpoint-up($screen-md) {
+    text-align: left;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-block: 4.87rem 9.5rem;
+    gap: 1.5rem;
+
+    .hero__img img {
+      width: 164%;
+      max-width: fit-content;
+    }
+
+    .hero__text {
+      h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.125rem;
+        margin-bottom: 2.1875rem;
+      }
+    }
+
+    .btn {
+      max-width: fit-content;
+      padding: 0.875rem 2.5rem;
+      // margin-inline: auto;
+      font-size: 1.25rem;
+    }
+  }
+
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+
+  @include media-breakpoint-up($screen-lg) {
+    max-width: 73.25rem;
+    margin: 0 auto;
+    padding-inline: 2rem;
+    text-align: left;
+    overflow-x: visible;
+
+    .hero__text {
+      h1 {
+        font-size: 5rem;
+        line-height: 5.65rem;
+        letter-spacing: -0.04ch;
+      }
+
+      p {
+        font-size: 1.375rem;
+        margin-right: 2rem;
+        line-height: 2.17rem;
+        letter-spacing: 0.0144rem;
+      }
+    }
+  }
+}
